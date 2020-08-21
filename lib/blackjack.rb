@@ -33,19 +33,19 @@ def initial_round
   # code #initial_round here
   fc = deal_card
   sc = deal_card
-  sum = fc + sc
-  display_card_total(sum)
-  sum
+  total = fc + sc
+  display_card_total(total)
+  total
 end
 
-def hit?(sum)
+def hit?(total)
   # code hit? here
   prompt_user
   input = get_user_input
   if input =="h"
-    sum += deal_card
+    total += deal_card
   elsif input =="s"
-    sum = sum
+    total = total
   else
     invalid_command
     prompt_user
